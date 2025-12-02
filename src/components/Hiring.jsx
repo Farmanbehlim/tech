@@ -1,3 +1,5 @@
+
+import React from "react";
 const openings = [
   {
     title: "Senior AI Engineer",
@@ -13,10 +15,10 @@ const openings = [
   },
 ];
 
-const Education = ({ isLightMode }) => {
+const Hiring = ({ isLightMode }) => {
   const sectionBg = isLightMode
     ? "bg-gradient-to-r from-[#fdf9eb] via-[#fefdf8] to-[#f7f4ff] text-[#1f2933]"
-    : "bg-gradient-to-r from-[rgb(41,39,83)] via-[rgb(38,38,87)] to-[rgb(52,51,96)] text-white";
+    : "bg-gradient-to-r from-[#111] via-[#151515] to-[#0c0c0c] text-white";
   const cardBg = isLightMode ? "bg-white border border-black/5 text-gray-800" : "bg-white/5 border border-white/40 text-gray-200";
   const labelColor = isLightMode ? "text-[#b88c00]" : "text-[#FBD037]";
 
@@ -42,7 +44,7 @@ const Education = ({ isLightMode }) => {
           ))}
         </div>
         <p className={`text-center mt-10 ${isLightMode ? "text-gray-600" : "text-gray-200"}`}>
-          Don’t see your role? Send your profile to{" "}
+          Don't see your role? Send your profile to{" "}
           <a href="mailto:farman1.behlim@gmail.com" className={`${labelColor} underline`}>
             farman1.behlim@gmail.com
           </a>
@@ -52,5 +54,12 @@ const Education = ({ isLightMode }) => {
   );
 };
 
-export default Education;
+export default Hiring;
+
+
+
+
+
+
+
 
