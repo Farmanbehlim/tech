@@ -50,15 +50,14 @@ const Showcase = ({ isLightMode }) => {
           <div className="flex flex-wrap items-center gap-5 mt-8">
             <a
               href="#services"
-              className="px-8 py-3 rounded-full bg-[#FBD037] text-black font-semibold text-lg"
+              className="px-8 py-3  bg-[#FBD037] text-black font-semibold text-lg"
             >
               Explore Services
             </a>
             <a
               href="#about"
-              className={`px-8 py-3 rounded-full border font-semibold text-lg transition ${
-                isLightMode ? "border-black/20 text-black hover:bg-black/5" : "border-white/40 text-white hover:bg-white/10"
-              }`}
+              className={`px-8 py-3  border font-semibold text-lg transition ${isLightMode ? "border-black/20 text-black hover:bg-black/5" : "border-white/40 text-white hover:bg-white/10"
+                }`}
             >
               Discover Our Story
             </a>

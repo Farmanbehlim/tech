@@ -9,6 +9,10 @@ module.exports = {
       fontFamily: {
         titillium: ["Titillium Web", "sans-serif"],
       },
+      colors:{
+      midyellow: "#F1c40f",
+      yellowcustom: "#FBD037",
+      },
       animation: {
         dropHeader: "dropHeader 0.75s ease forwards",
         marqueeLeft: "marqueeLeft 25s linear infinite",
