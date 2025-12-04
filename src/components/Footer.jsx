@@ -50,13 +50,30 @@ const Footer = ({ isLightMode }) => (
         {/* Company Info & Social Links */}
         <div className="space-y-6">
           <div className="space-y-6 text-sm capitalize">
-            {/* Logo - Replace with your actual logo */}
-            <div className={`${isLightMode ? "text-gray-900" : "text-white"}`}>
-              <span className="text-2xl font-bold">Farman Ali</span>
+            {/* Logo with Image */}
+            <div className="flex flex-col items-start">
+              <div className="flex items-center space-x-3">
+                {/* Logo Image - Replace src with your actual logo */}
+                <img 
+                  src="/images/logos/logocomp.png" // Replace with your logo path
+                  alt="ALIF INFOTECH Logo"
+                  className="w-16 h-16 object-contain"
+                />
+                <div className="flex flex-col">
+                  <div className={`text-5xl font-bold font-sans ${isLightMode ? "text-gray-900" : "text-white"}  tracking-wide`}>
+                    ALIF
+                  </div>
+                  <div className={`text-xs ${isLightMode ? "text-gray-600" : "text-white/80"} font-medium tracking-wider`}>
+                    INFOTECH
+                  </div>
+                </div>
+              </div>
+              
             </div>
+            
             <div className="flex transition duration-150 cursor-pointer items-center">
               <p className={isLightMode ? "text-gray-600" : "text-white/70"}>
-                Farman Ali is powered by a passionate developer dedicated to shaping the future of technology in the digital age.
+                Alif Infotech is powered by a passionate developer dedicated to shaping the future of technology in the digital age.
               </p>
             </div>
             <div className="flex transition duration-150 cursor-pointer items-center space-x-4 *:text-[#7D818D]">
@@ -182,7 +199,7 @@ const Footer = ({ isLightMode }) => (
       {/* Copyright */}
       <div className="mt-12 pt-8 border-t border-white/10 text-center">
         <p className={isLightMode ? "text-gray-600" : "text-gray-300"}>
-          Copyright &copy; 2025 Farman Ali. All Rights Reserved
+          Copyright &copy; 2025 alifinfotech.com All Rights Reserved.
         </p>
       </div>
     </div>

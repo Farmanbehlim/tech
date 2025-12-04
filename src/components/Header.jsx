@@ -1,8 +1,5 @@
-
-
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -143,16 +140,22 @@ const Header = ({ isLightMode, toggleTheme }) => {
     : "bg-gray-900 border-gray-700 shadow-2xl";
 
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 px-4">
-      <div className={`${wrapperStyles} lg:p-10 p-6 lg:py-4 py-3  flex items-center justify-between shadow-2xl backdrop-blur-sm relative xl:container mx-auto font-titillium transition-colors duration-500`}>
+    <header className="fixed top-4 left-0 right-0 z-50 max-w-7xl mx-auto px-4">
+      <div className={`${wrapperStyles} lg:p-10 p-6 lg:py-4 py-3 flex items-center justify-between shadow-2xl backdrop-blur-sm relative xl:container mx-auto font-titillium transition-colors duration-500 `}>
         <a href="#home" className="flex items-center gap-3">
-          <div className="w-12 h-12  bg-white flex items-center justify-center text-black font-bold text-xl tracking-tight">
-            FA
-          </div>
-          <div className="leading-tight">
-            <p className="text-lg font-semibold">Farman Technologies</p>
-            <p className={`text-xs uppercase tracking-[0.3em] ${isLightMode ? "text-gray-500" : "text-gray-300"}`}>Innovation Lab</p>
-          </div>
+          {/* Logo Image - Replace the src with your actual logo path */}
+          <img 
+            src="/images/logos/logocomp.png" 
+            alt="Company Logo" 
+            className="h-12 w-auto object-contain"
+            // For dark/light mode variants, you can use:
+            // src={isLightMode ? "/logo-light.png" : "/logo-dark.png"}
+          />
+          {/* Optional: Keep text logo as fallback or remove completely */}
+          {/* <div className="leading-tight">
+            <p className="text-lg font-semibold">Your Company Name</p>
+            <p className={`text-xs uppercase tracking-[0.3em] ${isLightMode ? "text-gray-500" : "text-gray-300"}`}>Tagline</p>
+          </div> */}
         </a>
 
         <nav className={`${navText} space-x-2 text-base items-center lg:flex hidden relative`}>
@@ -162,7 +165,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
                 <button
                   ref={servicesButtonRef}
                   onClick={toggleServices}
-                  className={`px-5 py-2  border ${
+                  className={`px-5 py-2 border ${
                     isServicesOpen
                       ? "border-[#FBD037] bg-[#FBD037]/10 text-[#FBD037]"
                       : "border-transparent hover:border-[#FBD037] hover:bg-[#FBD037]/10"
@@ -188,7 +191,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
                 <Link
                   to={href}
                   onClick={closeMenu}
-                  className={`px-5 py-2  border ${
+                  className={`px-5 py-2 border ${
                     label === "Home"
                       ? "border-[#FBD037] bg-[#FBD037]/10 text-[#FBD037]"
                       : "border-transparent hover:border-[#FBD037] hover:bg-[#FBD037]/10"
@@ -258,7 +261,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
           <button
             type="button"
             onClick={toggleTheme}
-            className={`w-12 h-12  border ${isLightMode ? "border-black/20 text-black" : "border-white/20 text-white"} flex items-center justify-center`}
+            className={`w-12 h-12 border ${isLightMode ? "border-black/20 text-black" : "border-white/20 text-white"} flex items-center justify-center`}
             aria-label="Toggle color mode"
           >
             {isLightMode ? (
@@ -274,7 +277,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
           </button>
           <a
             href="#contact"
-            className={`${isLightMode?"bg-midyellow":"bg-yellowcustom"} px-8 py-3  text-black text-lg font-medium cursor-pointer`}
+            className={`${isLightMode?"bg-midyellow":"bg-yellowcustom"} px-8 py-3 text-black text-lg font-medium cursor-pointer`}
           >
             Get In Touch
           </a>
@@ -284,7 +287,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
           <button
             type="button"
             onClick={toggleTheme}
-            className={`w-12 h-12  border ${isLightMode ? "border-black/20 text-black" : "border-white/20 text-white"} flex items-center justify-center`}
+            className={`w-12 h-12 border ${isLightMode ? "border-black/20 text-black" : "border-white/20 text-white"} flex items-center justify-center`}
             aria-label="Toggle color mode"
           >
             {isLightMode ? "☾" : "☀"}
@@ -292,7 +295,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
           <button
             type="button"
             aria-label="Toggle menu"
-            className={`px-6 py-3  text-lg font-medium ${isLightMode ? "bg-black text-white" : "bg-white/10 border border-white/20 text-white"}`}
+            className={`px-6 py-3 text-lg font-medium ${isLightMode ? "bg-black text-white" : "bg-white/10 border border-white/20 text-white"}`}
             onClick={toggleMenu}
           >
             {isMenuOpen ? (
@@ -319,7 +322,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
         {/* Close Button - Top Right */}
         <button
           onClick={closeMenu}
-          className="absolute top-8 right-8 p-3  bg-white/10 hover:bg-white/20 transition-colors"
+          className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 transition-colors"
           aria-label="Close menu"
         >
           <svg 
@@ -398,7 +401,7 @@ const Header = ({ isLightMode, toggleTheme }) => {
         <a
           href="#contact"
           onClick={closeMenu}
-          className={`px-8 py-3  ${isLightMode ? "bg-midyellow" : "bg-yellowcustom"} text-black font-semibold mt-4`}
+          className={`px-8 py-3 ${isLightMode ? "bg-midyellow" : "bg-yellowcustom"} text-black font-semibold mt-4`}
         >
           Get In Touch
         </a>

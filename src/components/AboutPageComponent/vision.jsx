@@ -10,8 +10,8 @@ const Vision = ({ isLightMode }) => {
     
     <>
     
-      <section className={`${isLightMode ? "bg-white text-[#0f172a]" : "bg-black text-white"} py-10 lg:py-16 border-t ${isLightMode ? "border-black/5" : "border-white/10"} transition-colors duration-500`}>
-        <div className="mx-auto px-4 md:px-10 2xl:px-0 w-full xl:container">
+      <section className={`max-w-[80%]  mx-auto ${isLightMode ? "bg-white text-[#0f172a]" : "bg-black text-white"} py-10 lg:py-16 border-t ${isLightMode ? "border-black/5" : "border-white/10"} transition-colors duration-500`}>
+        <div className="mx-auto px-4 md:px-10 2xl:px-0 w-full xl:container ">
           {/* Vision */}
           <div className="items-center gap-6 lg:gap-10 grid grid-cols-1 sm:grid-cols-2 mb-16">
             <div>
