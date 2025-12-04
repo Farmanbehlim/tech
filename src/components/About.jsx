@@ -7,7 +7,7 @@ const About = ({ isLightMode }) => {
     <section id="about" className={`${isLightMode ? "bg-white text-[#0f172a]" : "bg-black text-white"} py-20 px-6 border-t ${isLightMode ? "border-black/5" : "border-white/10"} transition-colors duration-500`}>
       <div className="max-w-5xl mx-auto grid gap-12 md:grid-cols-2 items-center">
         <div>
-          <p className={`uppercase tracking-[0.35em] text-xs mb-4 ${labelColor}`}>About Farman Technologies</p>
+          <p className={`uppercase tracking-[0.35em] text-xs mb-4 ${labelColor}`}>About Alif Infotech</p>
           <h2 className="text-4xl font-light leading-tight mb-6">
             We craft resilient digital products with strategy, design, and engineering under one roof.
           </h2>

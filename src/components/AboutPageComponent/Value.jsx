@@ -9,8 +9,10 @@ const Value = ({ isLightMode }) => {
 
     return (
         <>
-            <section className={`py-10 lg:py-16 ${sectionBg} transition-colors duration-500`}>
-                <div className="mx-auto px-4 md:px-10 2xl:px-0 w-full xl:container">
+        <section className={`${sectionBg}`}>
+
+            <div className={`max-w-[80%] mx-auto py-10 lg:py-16 $ transition-colors duration-500`}>
+                <div className=" mx-auto px-4 md:px-10 2xl:px-0 w-full xl:container">
                     <div className="flex flex-col items-center mb-12">
                         <h2 className={`text-2xl md:text-4xl font-bold ${labelColor}`}>
                             Our Core Values
@@ -59,7 +61,8 @@ const Value = ({ isLightMode }) => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         </>
     );
 };
